@@ -72,10 +72,10 @@ const generateReceipt = async (req, res) => {
 
 const generatPdf = async ({ name, email, phone, amount, items }) => {
   const browser = await puppeteer.launch({
-    args: ['--no-sandbox', '--disable-setuid-sandbox', '--single-process', '--no-zygote'],
-    executablePath: process.env.ENVIRONMENT === 'PRODUCTION' ? 
-     process.env.PUPPETEER_EXECUTABLE_PATH
-     : puppeteer.executablePath()
+    args: ['--no-sandbox', '--disable-setuid-sandbox', '--single-process', '--no-zygote']
+    // executablePath: process.env.ENVIRONMENT === 'PRODUCTION' ? 
+    //  process.env.PUPPETEER_EXECUTABLE_PATH
+    //  : puppeteer.executablePath()
   });
   try {
     const page = await browser.newPage();
