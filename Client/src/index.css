@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    overflow-y: scroll;
+}
+.main::-webkit-scrollbar {
+    display: none;
+}
+/* General styles for the form */
+form {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input container styling */
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Each input group (row of inputs) */
+.inputs {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    input {
+        width: 100%;
+    }
+}
+
+input, select {
+    width: calc(33.33% - 10px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #4D90FE;
+    outline: none;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4D90FE;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+button:hover {
+    background-color: #357AE8;
+}
+
+/* Styling for "Add Items" button */
+button[type="button"] {
+    background-color: #28A745;
+    margin-top: 10px;
+}
+
+button[type="button"]:hover {
+    background-color: #218838;
+}
+
+/* Custom select dropdown */
+select {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: white;
+    transition: border-color 0.3s ease;
+}
+
+
+
+.inputs:first-of-type input {
+    width: 100%;
+}
+
+/* Loading state styling */
+button[type="submit"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .inputs {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    input, select {
+        width: 100%;
+    }
+}
