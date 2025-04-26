@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "postinstall": "PUPPETEER_SKIP_DOWNLOAD=false npm install",
+    "postinstall": "node node_modules/puppeteer/install.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app.js"
   },
