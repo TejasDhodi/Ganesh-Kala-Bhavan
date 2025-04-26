@@ -5,7 +5,7 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
 
 WORKDIR /urs/src/app
 
-COPY package*.json
+COPY package*.json ./
 RUN npm ci
 COPY . .
 CMD ["nodemon", "app.js"]
