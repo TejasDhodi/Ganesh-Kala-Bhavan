@@ -6,8 +6,6 @@ USER root
 
 RUN apt-get update && apt-get install -y chromium
 
-USER pwuser
-
 WORKDIR /usr/src/app
 
 COPY package*.json ./
